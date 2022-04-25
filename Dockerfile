@@ -5,6 +5,8 @@ RUN apk update && apk upgrade && \
 
 RUN git lfs install
 
+RUN git config lfs.allowincompletepush true
+
 COPY mirror.sh /mirror.sh
 COPY setup-ssh.sh /setup-ssh.sh
 
